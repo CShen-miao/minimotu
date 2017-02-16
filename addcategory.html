@@ -1,0 +1,71 @@
+<? include_once "header.html"?>
+<!--内容-->
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+	 <section class="content-header">
+        <h1>
+            <ol class="breadcrumb" id="breadcrumb">
+                <li><a href="?do=Main"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active"><a href="?do=Admin.Main.Starter">分类列表</a></li>
+                <li class="active">添加分类 &nbsp; &nbsp;&nbsp;</li>
+            </ol>
+        </h1>
+    </section>
+    <!-- Main content -->
+	<section class="content">
+        <div class="row">
+			<div class="col-md-12" style="margin:0px 0px 100px 0px;">
+				<div class="box box-primary">
+					<!--页面标题-->
+					<div class="box-header with-border">
+					    <h3 class="box-title">添加分类<span class="label label-info hide" id="number"></span></h3>
+				    </div>
+					<!-- /.box-header -->
+					<div class="box-body table-responsive no-padding">
+					
+						<table class="table table-bordered table-hover dataTable" id="listTable">
+							<thead>
+							    <tr>
+									<th>id</th>
+									<th>类别</th>
+									<th>封面图URL</th>
+									<th>状态</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<form class="form-inline" method="post" action="?do=Admin.Main.Addcategory">
+							<tbody>
+								<tr>
+									<td style="padding-top:15px">#</td>
+									<td>
+										<div class="form-group">
+											<label class="sr-only" for="exampleInputEmail3">类别</label>
+											<input type="text" class="form-control" id="" placeholder="类别">
+										</div>
+									</td>
+									<td>
+										<div class="form-group">
+											<label class="sr-only" for="exampleInputEmail3">封面图URL</label>
+											<input type="text" class="form-control" id="" placeholder="http://XXX.com">
+										</div>
+									</td>
+									<td style="padding-top:15px;color:#FF0000;weight:20">未激活</td>
+									<td style="padding-top:15px"><button type="submit" class="btn btn-sm btn-success">添加</button></td>
+								</tr>
+							</tbody>
+							</form>
+						</table>
+						<div class="loader"></div>
+						<div id='list_multi' style="text-align:center"></div>
+					</div>
+				<!-- /.box-body -->
+			    </div>
+			<!-- /.box -->
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<? include "footer.html"?>
